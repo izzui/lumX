@@ -123,6 +123,10 @@ angular.module('lumx.tooltip', [])
                         ctrl.init(element, attrs);
                     }
                 });
+                scope.$on('$destroy', function () 
+                {
+                    ctrl.hideTooltip();
+                });            
             }
         };
     });
